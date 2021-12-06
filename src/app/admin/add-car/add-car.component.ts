@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { CarsStorageService } from 'src/app/shared/cars-storage.service';
-// import { Car } from 'src/app/shared/Car.model';
 import {Car} from '../../shared/Car.model'
 import { CarsService } from '../../shared/cars.service';
 import {carStorage} from '../../services/car-Storage.service'
@@ -70,6 +69,8 @@ export class AddCarComponent implements OnInit {
     const newCar = new Car(model,registration,imgPath,description,mark,society,gearbox,speed,seats,city,location,price);
 
     this.carStorage.setCar(newCar);
+    
+
     this.carsService.addCar(newCar);
 
     this.newCarForm.reset();

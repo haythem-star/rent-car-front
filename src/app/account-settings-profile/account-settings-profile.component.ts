@@ -15,15 +15,6 @@ export class AccountSettingsProfileComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  /*updateUser(username: string) {
-    this.modifyUsernameService.setuser(username);
-  } */
-
-
- /* Onkey(event:any){
-    this.username= event.target.value;
-  } */
-
   onSubmit(){
     if(this.form.value['name'])
     {
