@@ -1,10 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AuthService } from 'src/app/services/auth.service';
-import { carStorage } from 'src/app/services/car-Storage.service';
 import { RentalServiceService } from 'src/app/services/rental-service.service';
 import { CarsStorageService } from 'src/app/shared/cars-storage.service';
-import { CarsService } from 'src/app/shared/cars.service';
 
 import {Car} from '../../shared/Car.model'
 
