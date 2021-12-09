@@ -31,6 +31,7 @@ export class PlaceDateComponent implements OnInit {
     'Zaghouan',
     'Tataouine',
     'Manouba',
+    'kef',
   ];
   filteredOptions: Observable<string[]>;
 
@@ -86,7 +87,6 @@ export class PlaceDateComponent implements OnInit {
       } else {
         this.rentService.setend(event.toString().split('(')[0].trim());
       }
-      // console.log(str + ': ' +event.toString().split('(')[0].trim());
     } else {
       if (str === 'start') {
         this.rentService.setstart(null);
