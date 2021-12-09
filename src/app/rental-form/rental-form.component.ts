@@ -40,21 +40,31 @@ export class RentalFormComponent implements OnInit {
       this.renderer2.appendChild(this._document.body, s);
   }
    
-   loadNextScript() {
-      const s = this.renderer2.createElement('script');
-      s.text = `var stripe = Stripe('pk_test_51IuQbSCxbz7I0xpYRnDxcadxGC0120u6UiIkFY2TLKtO2HXd6ucGjlhh4b48T0HjyLYSNA9BM8uLvN95WATgsgBE00ep7GbZcX');
-      var orderBtn = document.getElementById('order-btn');
-      var inputSession = document.getElementById('sessionId');
-      orderBtn.addEventListener('click',function(){
-        console.log('script not existe');
-          stripe.redirectToCheckout({
-              sessionId : '${this.sessionId}'
-          })
-      })
-   `
-      this.renderer2.appendChild(this._document.body, s);
    
 
-  }
+
+
+
+
+
+
+
+
+  loadNextScript() {
+    const s = this.renderer2.createElement('script');
+    s.text = `var stripe = Stripe('pk_test_51IuQbSCxbz7I0xpYRnDxcadxGC0120u6UiIkFY2TLKtO2HXd6ucGjlhh4b48T0HjyLYSNA9BM8uLvN95WATgsgBE00ep7GbZcX');
+    var orderBtn = document.getElementById('order-btn');
+    var inputSession = document.getElementById('sessionId');
+    orderBtn.addEventListener('click',function(){
+      console.log('script not existe');
+        stripe.redirectToCheckout({
+            sessionId : '${this.sessionId}'
+        })
+    })
+ `
+    this.renderer2.appendChild(this._document.body, s);
+ 
+
+}
 
 }
